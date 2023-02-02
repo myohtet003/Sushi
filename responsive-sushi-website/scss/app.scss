@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lora:wght@500;600&family=Poppins:wght@400;500&display=swap");
+
+
+@import "../node_modules/remixicon/fonts/remixicon.css";
+
+
+
+//customize 
+
+$navbar-nav-link-padding-x: 1.5rem;
+$body-bg:  hsl(19, 100%, 96%);
+$font-family-sans-serif: "Poppins";
+$headings-font-family:"Lora", serif;
+$font-size-base: 0.8rem;
+
+$primary:  hsl(19, 64%, 54%);
+$btn-border-radius: 2rem;
+$btn-padding-x: 2rem;
+$btn-padding-y: 0.9rem;
+$light:  hsl(19, 8%, 55%);
+
+
+
+
+
+
+//custom css
+.navbar-brand-logo{
+    height: 1.5rem;
+}
+ 
+.btn-primary,.btn-primary:hover,.btn-primary:active{
+    color: white;
+}
+.home-title{
+    height: 50px;
+
+}
+
+.btn-primary i{
+    font-size: 20px;
+
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
