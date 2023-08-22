@@ -1,45 +1,242 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lora:wght@500;600&family=Poppins:wght@400;500&display=swap");
 
-
 @import "../node_modules/remixicon/fonts/remixicon.css";
 
+@import "../node_modules/animate.css/animate.css";
 
-
-//customize 
+//customize
 
 $navbar-nav-link-padding-x: 1.5rem;
-$body-bg:  hsl(19, 100%, 96%);
+$body-bg: hsl(19, 100%, 96%);
 $font-family-sans-serif: "Poppins";
-$headings-font-family:"Lora", serif;
+// $headings-font-family:
 $font-size-base: 0.8rem;
 
-$primary:  hsl(19, 64%, 54%);
-$btn-border-radius: 2rem;
-$btn-padding-x: 2rem;
-$btn-padding-y: 0.9rem;
-$light:  hsl(19, 8%, 55%);
+$body-color: hsl(19, 16%, 15%);
+$primary: hsl(19, 64%, 54%);
+$btn-border-radius: 3rem;
+$btn-padding-x: 1.5rem;
+$btn-padding-y: 0.3rem;
 
-
-
-
-
-
-//custom css
-.navbar-brand-logo{
-    height: 1.5rem;
-}
- 
-.btn-primary,.btn-primary:hover,.btn-primary:active{
-    color: white;
-}
-.home-title{
-    height: 50px;
-
-}
-
-.btn-primary i{
-    font-size: 20px;
-
-}
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+  7: $spacer * 5,
+  8: $spacer * 6,
+  9: $spacer * 7,
+  10: $spacer * 8,
+);
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+//custom css
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 3000px;
+}
+
+.navbar-brand-logo {
+  height: 1.5rem;
+}
+
+.home-title {
+  height: 45px;
+}
+
+.btn-primary {
+  width: 150px;
+}
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active {
+  color: white;
+}
+
+.btn-primary i {
+  font-size: 20px;
+}
+
+.title {
+  font-family: "Lora", serif;
+}
+
+.sub-title {
+  font-family: "Dancing Script", cursive;
+}
+
+.text-color {
+  color: hsl(19, 16%, 35%);
+}
+
+.order-button:hover i {
+  transform: translate(2px);
+  // font-size: 21px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.popular-color {
+  background-color: hsl(19, 100%, 97%);
+}
+
+.popular-color:hover img {
+  transform: translateY(-30px);
+  transition-duration: 0.5s;
+}
+
+.popular-icon {
+  // margin-left: 50px;
+  font-size: 18px;
+  background-color: $primary;
+  position: relative;
+  right: -40px;
+  padding: 2px;
+}
+
+.popular-icon:hover i {
+  // position: absolute;
+  transform: translateY(-10px);
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.popular-dish {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.popular-logo {
+  margin-top: -40px;
+  position: relative;
+}
+.popular-price {
+  font-size: 15px;
+  // margin-left: 110px;
+}
+
+.recent-logo {
+  position: relative;
+}
+.recent-logo h1 img {
+  position: absolute;
+  transform: rotate(27deg);
+}
+
+.recent-round {
+  border-radius: 2rem;
+  position: relative;
+}
+
+.recent-round .leaf {
+  width: 40px;
+  position: absolute;
+  right: 60px;
+  transform: rotate(23deg);
+  bottom: -35px;
+}
+
+.btn-icon i {
+  font-size: 20px;
+  vertical-align: middle;
+  // position: absolute;
+  // transform: rotate(301degs);
+}
+
+.footer-logo {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.footer-img {
+  position: relative;
+}
+.footer-img img {
+  position: absolute;
+  width: 30px;
+  transform: rotate(33deg);
+  right: 170px;
+}
+
+.footer-img_2 {
+  position: relative;
+}
+
+.footer-img_2 img {
+  position: absolute;
+  width: 30px;
+  transform: rotate(317deg);
+  right: 130px;
+  bottom: -100px;
+}
+
+.list-group:hover li {
+  color: $primary;
+  cursor: pointer;
+}
+
+.logo {
+  text-align: center;
+  font-size: 18px;
+  // background-color: $primary;
+  color: rgb(19, 11, 11);
+  padding: 2px;
+  position: relative;
+}
+
+@include media-breakpoint-down(md) {
+  .recent-round {
+    border-radius: 0;
+  }
+  .footer-img {
+    position: relative;
+  }
+  .footer-img img {
+    position: absolute;
+    width: 20px;
+    transform: rotate(33deg);
+    right: 90px;
+    bottom: 15px;
+  }
+  .footer-img_2 {
+    position: relative;
+  }
+
+  .footer-img_2 img {
+    position: absolute;
+    width: 30px;
+    transform: rotate(317deg);
+    right: 130px;
+    bottom: 30px;
+  }
+}
+
+// @media screen and (max-width: 1200px) {
+//     .popular-price{
+//         font-size: 15px;
+//         margin-left: -50px;
+//     }
+
+//     .popular-icon{
+//         margin-left: -25px;
+//     }
+// }
+// @media screen and (max-width: 400px) {
+//     .popular-color{
+//         box-shadow: none;
+//     }
+// }
